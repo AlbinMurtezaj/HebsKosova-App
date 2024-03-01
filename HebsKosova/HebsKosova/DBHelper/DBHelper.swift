@@ -2,18 +2,8 @@
 //  DBHelper.swift
 //  HebsKosova
 //
-//  Created by Desara Qerimi on 27.2.24.
+//  Created by Albin Murtezaj on 27.2.24.
 //
-
-//
-//  DBHelper.swift
-//  HebsKosova
-//
-//  Created by Desara Qerimi on 27.2.24.
-//
-
-//
-
 
 import Foundation
 import SQLite3
