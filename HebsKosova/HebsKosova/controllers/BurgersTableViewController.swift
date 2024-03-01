@@ -1,8 +1,9 @@
 import UIKit
 
-class BurgersTableViewController: UIViewController, UITableViewDataSource {
+class BurgersTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var showMessage: UILabel!
     
     var dbPointer: OpaquePointer?
     var menuItems: [FoodModel] = []
@@ -19,6 +20,7 @@ class BurgersTableViewController: UIViewController, UITableViewDataSource {
         
         // Set up table view
         tableView.dataSource = self
+        tableView.delegate=self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
         tableView.reloadData()
@@ -45,11 +47,32 @@ class BurgersTableViewController: UIViewController, UITableViewDataSource {
             // Perform action when the button is tapped
             // For example, add the data to the CartController
             self.dataController.addCartItem(menuItem)
-            print("the item has been added to the cart")
+            self.showAlert(from: self, message: "Produkti u shtua ne shporte!")
+            //print("the item has been added to the cart")
             // Pass the selected menu item to the ShportaDataController
             // You can also update UI or perform any other necessary tasks here
         }
 
         return cell
+    }
+    private func showAlert(from viewController: UIViewController, message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        viewController.present(alert, animated: true, completion: nil)
+    }
+    
+    // Function to show message for 3 seconds
+        func showMessageFunc(_ message: String) {
+            showMessage.text = message
+            showMessage.isHidden = false
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.showMessage.isHidden = true
+            }
+        }
+
+    
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
 }
