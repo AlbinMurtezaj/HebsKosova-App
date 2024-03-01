@@ -108,8 +108,22 @@
                         <viewLayoutGuide key="safeArea" id="Nzw-OL-vnh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="m7K-1X-34z"/>
+                   <navigationItem key="navigationItem" id="m7K-1X-34z">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="wTa-sH-h75">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fgW-Fz-Wf8">
+                                <rect key="frame" x="305" y="0.0" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="shopping-cart"/>
+                                <connections>
+                                    <segue destination="uJJ-ga-Ce7" kind="show" id="KkE-C9-BxI"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="showMessage" destination="tnU-0L-t79" id="kpw-Cc-dnr"/>
+                        <!-- Add any other existing outlet connections here -->
                         <outlet property="tableView" destination="55x-pD-98N" id="gwB-LB-eQ2"/>
                     </connections>
                 </viewController>
