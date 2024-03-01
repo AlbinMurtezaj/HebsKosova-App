@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  HebsKosova
 //
-//  Created by Desara Qerimi on 26.2.24.
+//  Created by Albin Murtezaj on 26.2.24.
 //
 
 import UIKit
