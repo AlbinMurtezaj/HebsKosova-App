@@ -1,4 +1,4 @@
-# Heb's Online Ordering App
+# Heb's Kosova App
 ## Përmbledhje
 Aplikacioni Heb's është një aplikacion i zhvilluar për pajisjet mobile iOS. Ai lejon përdoruesit të porosisin mënyrë të përshtatshme ushqim nga zinxhirin e ushqimit Heb's. Aplikacioni përmban pamje të shumëfishta, duke përfshirë menytë për oferta të veçanta, burgera, wraps, chicken dhe një shportë blerjesh për menaxhimin e porosive.
 
